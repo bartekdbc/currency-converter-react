@@ -6,11 +6,11 @@ html {
   box-sizing: inherit;
 }
 
-.body {
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 90vh;
   background-image: url(../src/background.png);
   background-size: cover;
   background-position: center center;
