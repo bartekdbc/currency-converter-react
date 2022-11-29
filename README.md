@@ -9,7 +9,7 @@
 
 ## Demo 🎮
 
-You can find a demo version [here](https://bartekdbc.github.io/currency-converter/).
+You can find a demo version [here](https://bartekdbc.github.io/currency-converter-react/).
 
 ## Description 📖
 
