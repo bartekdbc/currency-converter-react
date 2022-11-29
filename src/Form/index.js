@@ -12,7 +12,7 @@ const Form = () => (
               <span className="form__labelText">Kwota*:</span>
               <input
                 className="form__field"
-                name="PLN"
+                name="Kwota w PLN"
                 type="number"
                 min="0.01"
                 step="any"
