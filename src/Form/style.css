@@ -19,9 +19,11 @@
 }
 
 .form__labelText {
-    width: 100%;
-    max-width: 200px;
+    margin: 0 0 10px;
+    text-align: left;
     display: inline-block;
+    max-width: 80px;
+    width: 100%;
 }
 
 .form__field {
