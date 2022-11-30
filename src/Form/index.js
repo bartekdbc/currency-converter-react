@@ -1,7 +1,12 @@
 import "./style.css";
+import { useState } from "react";
 import { currencies } from "../currencies";
 
 const Form = () => {
+  const [amount, setAmount] = useState("");
+
+  const onInputChange = ({target}) => setAmount(target.value);
+
   const onFormSubmit = (event) => {
     event.preventDefault();
   };
@@ -17,6 +22,7 @@ const Form = () => {
           <label>
             <span className="form__labelText">Kwota*:</span>
             <input
+              value={amount}
               className="form__field"
               name="Kwota w PLN"
               type="number"
@@ -25,6 +31,7 @@ const Form = () => {
               placeholder="PLN"
               autofocus
               required
+              onChange={onInputChange}
             />
           </label>
         </p>
