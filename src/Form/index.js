@@ -1,19 +1,29 @@
 import "./style.css";
 import { useState } from "react";
 import { currencies } from "../currencies";
+import { Result } from "./Result";
 
 const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
+  const [result, setResult] = useState("");
 
-
-  const currencyRate = currencies.find(({ short }) => short === currency).rate;
+  const rate = currencies.find(({ short }) => short === currency).rate;
 
   const onInputChange = ({ target }) => setAmount(target.value);
   const onSelectChange = ({ target }) => setCurrency(target.value);
 
+  const calculateResult = () => {
+    setResult({
+      currency,
+      startAmount: +amount,
+      endAmount: amount * rate,
+    })
+  };
+
   const onFormSubmit = (event) => {
     event.preventDefault();
+    calculateResult();
   };
 
   return (
@@ -61,11 +71,7 @@ const Form = () => {
         <p>
           <button className="form__button">Przelicz</button>
         </p>
-        <p className="form__result">
-          <span>
-            <Result />
-          </span>
-        </p>
+        <Result result={result}/>
         <p>*- wymagane pola</p>
         <p>
           Kursy walut pobierane są z Narodowego Banku Polskiego.
