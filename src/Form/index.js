@@ -5,7 +5,7 @@ import { currencies } from "../currencies";
 const Form = () => {
   const [amount, setAmount] = useState("");
 
-  const onInputChange = ({target}) => setAmount(target.value);
+  const onInputChange = ({ target }) => setAmount(target.value);
 
   const onFormSubmit = (event) => {
     event.preventDefault();
@@ -39,12 +39,12 @@ const Form = () => {
           <label>
             <span className="form__labelText">Waluta*:</span>
             <select className="form__field" name="currency" required>
-                <option value="EUR">🇪🇺 Euro</option>
-                <option value="USD">🇺🇸 Dolar amerykański</option>
-                <option value="CHF">🇨🇭 Frank szwajcarski</option>
-                <option value="GBP">🇬🇧 Funt brytyjski</option>
-                <option value="HKD">🇭🇰 Dolar Hongkongu</option>
-              </select>
+              <option value="EUR">🇪🇺 Euro</option>
+              <option value="USD">🇺🇸 Dolar amerykański</option>
+              <option value="CHF">🇨🇭 Frank szwajcarski</option>
+              <option value="GBP">🇬🇧 Funt brytyjski</option>
+              <option value="HKD">🇭🇰 Dolar Hongkongu</option>
+            </select>
           </label>
         </p>
         <p>
