@@ -4,7 +4,7 @@ import { currencies } from "../currencies";
 
 const Form = () => {
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState(currencies[0].name);
+  const [currency, setCurrency] = useState(currencies[0].short);
 
   const onInputChange = ({ target }) => setAmount(target.value);
   const onSelectChange = ({ target }) => setCurrency(target.value);
@@ -47,10 +47,11 @@ const Form = () => {
               required
               onChange={onSelectChange}
             >
-              {currencies.map(currency => (
-                <option key={currency.short} value={currency.short}>{currency.name}</option>
+              {currencies.map((currency) => (
+                <option key={currency.short} value={currency.short}>
+                  {currency.name}
+                </option>
               ))}
-              
             </select>
           </label>
         </p>
