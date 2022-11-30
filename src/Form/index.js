@@ -6,6 +6,9 @@ const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
 
+
+  const currencyRate = currencies.find(({ short }) => short === currency).rate;
+
   const onInputChange = ({ target }) => setAmount(target.value);
   const onSelectChange = ({ target }) => setCurrency(target.value);
 
@@ -59,7 +62,9 @@ const Form = () => {
           <button className="form__button">Przelicz</button>
         </p>
         <p className="form__result">
-          <span></span>
+          <span>
+            <Result />
+          </span>
         </p>
         <p>*- wymagane pola</p>
         <p>
