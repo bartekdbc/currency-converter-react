@@ -52,8 +52,3 @@
 .form__button:hover {
     background-color: #67b99a;
 }
-
-.form__result {
-    font-size: 19px;
-    font-weight: bold;
-}
