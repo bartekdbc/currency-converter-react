@@ -44,7 +44,6 @@ const Form = () => {
               min="0.01"
               step="any"
               placeholder="PLN"
-              autofocus
               required
               onChange={onInputChange}
             />
