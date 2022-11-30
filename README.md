@@ -1,17 +1,18 @@
 # Currency Converter 💱
 ## Table of content 
 
-- [Demo](#demo-🎮)
-- [Description](#description-📖)
-- [Manual](#manual-🕹️)
-- [Preview](#preview-👀)
-- [Technologies](#technologies-🤖)
+- [Demo](#demo)
+- [Description](#description)
+- [Manual](#manual)
+- [Preview](#preview)
+- [Available Scripts](#available-scripts)
+- [Technologies](#technologies)
 
-## Demo 🎮
+## 🎮Demo
 
 You can find a demo version [here](https://bartekdbc.github.io/currency-converter-react/).
 
-## Description 📖
+## 📖Description
 
 This is a currency converter that allows to exchange Polish zloty into currencies such as:
 
@@ -25,13 +26,13 @@ Application was created as a practical section part of  YouCode Frontend Develop
 
 Below you can find user's manual to this application.
 
-## Manual 🕹️
+## 🕹️Manual
 
 1. Enter a value that you want to exchange.
 2. Select one of five currencies from the list.
 3. CLick on "PRZELICZ" button to receive the result.
 
-## Preview 👀
+## 👀Preview
 
 ![Preview](https://github.com/bartekdbc/currency-converter/blob/main/images/Manual.gif)
 
@@ -67,7 +68,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Technologies 🤖
+## 🤖Technologies
 
 - HTML
 - CSS (Flex, Grid, media queries)
