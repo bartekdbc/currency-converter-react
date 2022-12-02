@@ -6,7 +6,7 @@ import { Result } from "./Result";
 const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState();
 
   const rate = currencies.find(({ short }) => short === currency).rate;
 
