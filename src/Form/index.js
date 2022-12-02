@@ -18,7 +18,7 @@ const Form = () => {
       currency,
       startAmount: +amount,
       endAmount: amount / rate,
-    })
+    });
   };
 
   const onFormSubmit = (event) => {
@@ -39,7 +39,6 @@ const Form = () => {
             <input
               value={amount}
               className="form__field"
-              name="Kwota w PLN"
               type="number"
               min="0.01"
               step="any"
@@ -55,12 +54,13 @@ const Form = () => {
             <select
               value={currency}
               className="form__field"
-              name="currency"
-              required
               onChange={onSelectChange}
             >
               {currencies.map((currency) => (
-                <option key={currency.short} value={currency.short}>
+                <option 
+                key={currency.short} 
+                value={currency.short}
+                >
                   {currency.name}
                 </option>
               ))}
@@ -70,7 +70,7 @@ const Form = () => {
         <p>
           <button className="form__button">Przelicz</button>
         </p>
-        <Result result={result}/>
+        <Result result={result} />
         <p>*- wymagane pola</p>
         <p>
           Kursy walut pobierane są z Narodowego Banku Polskiego.
