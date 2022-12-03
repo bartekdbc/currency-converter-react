@@ -4,7 +4,7 @@ import { useCurrentDate } from "./useCurrentDate";
 const Clock = () => {
   const date = useCurrentDate();
 
-  const formattedDate = date.toLocaleString(undefined, {
+  const formatDate = date.toLocaleString(undefined, {
     weekday: "long",
     month: "long",
     day: "numeric",
@@ -16,7 +16,7 @@ const Clock = () => {
 
   return (
     <p className="clock">
-      <>Dzisiaj jest {formattedDate}</>
+      <>Dzisiaj jest {formatDate}</>
     </p>
   );
 };
