@@ -23,22 +23,17 @@ export const StyledFieldset = styled.fieldset`
   border: none;
 `;
 
+export const Label = styled.label`
+  margin-bottom: 20px;
+`;
+
 export const LabelText = styled.span`
   display: inline-block;
   max-width: 200px;
   width: 100%;
 `;
 
-export const Input = styled.input`
-  border: 2px solid ${({ theme }) => theme.color.green};
-  border-radius: 5px;
-  padding: 10px;
-  width: 100%;
-  max-width: 260px;
-  margin: 10px 10px 0px 0px;
-`;
-
-export const Select = styled.select`
+export const FormField = styled.input`
   border: 2px solid ${({ theme }) => theme.color.green};
   border-radius: 5px;
   padding: 10px;

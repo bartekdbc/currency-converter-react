@@ -1,4 +1,4 @@
-import { StyledForm, Header, Special, StyledFieldset, LabelText, Input, Select, Button } from "./styled";
+import { StyledForm, Header, Special, StyledFieldset, Label, LabelText, FormField, Button } from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
@@ -33,9 +33,9 @@ const Form = () => {
       </Header>
       <StyledFieldset>
         <p>
-          <label>
+          <Label>
             <LabelText>Kwota*:</LabelText>
-            <Input
+            <FormField
               value={amount}
               type="number"
               min="0.01"
@@ -44,12 +44,12 @@ const Form = () => {
               required
               onChange={onInputChange}
             />
-          </label>
+          </Label>
         </p>
         <p>
-          <label>
+          <Label>
             <LabelText>Waluta*:</LabelText>
-            <Select
+            <FormField as="select"
               value={currency}
               onChange={onSelectChange}
             >
@@ -61,8 +61,8 @@ const Form = () => {
                   {currency.name}
                 </option>
               ))}
-            </Select>
-          </label>
+            </FormField>
+          </Label>
         </p>
         <p>
           <Button>Przelicz</Button>
