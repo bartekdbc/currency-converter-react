@@ -1,7 +1,16 @@
-import { StyledForm, Header, Special, StyledFieldset, Label, LabelText, FormField, Button } from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
+import { 
+  StyledForm, 
+  Header, 
+  Special, 
+  StyledFieldset, 
+  Label, 
+  LabelText, 
+  FormField, 
+  Button 
+} from "./styled";
 
 const Form = () => {
   const [amount, setAmount] = useState("");
