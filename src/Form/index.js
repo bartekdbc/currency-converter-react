@@ -1,4 +1,4 @@
-import "./style.css";
+import { StyledForm, Header, Special, StyledFieldset, LabelText, Input, Select, Button } from "./styled";
 import { useState } from "react";
 import { currencies } from "../currencies";
 import { Result } from "./Result";
@@ -27,18 +27,16 @@ const Form = () => {
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
-      <h1 className="form__header">
-        Kalkulator walutowy by <span className="form__special">dbc</span>
-      </h1>
-      <fieldset className="form__fieldset">
-        <legend className="form__legend"></legend>
+    <StyledForm onSubmit={onFormSubmit}>
+      <Header>
+        Kalkulator walutowy by <Special>dbc</Special>
+      </Header>
+      <StyledFieldset>
         <p>
           <label>
-            <span className="form__labelText">Kwota*:</span>
-            <input
+            <LabelText>Kwota*:</LabelText>
+            <Input
               value={amount}
-              className="form__field"
               type="number"
               min="0.01"
               step="any"
@@ -50,10 +48,9 @@ const Form = () => {
         </p>
         <p>
           <label>
-            <span className="form__labelText">Waluta*:</span>
-            <select
+            <LabelText>Waluta*:</LabelText>
+            <Select
               value={currency}
-              className="form__field"
               onChange={onSelectChange}
             >
               {currencies.map((currency) => (
@@ -64,11 +61,11 @@ const Form = () => {
                   {currency.name}
                 </option>
               ))}
-            </select>
+            </Select>
           </label>
         </p>
         <p>
-          <button className="form__button">Przelicz</button>
+          <Button>Przelicz</Button>
         </p>
         <Result result={result} />
         <p>*- wymagane pola</p>
@@ -77,8 +74,8 @@ const Form = () => {
           <br />
           Aktualne na dzień: <strong>2022-10-24</strong>
         </p>
-      </fieldset>
-    </form>
+      </StyledFieldset>
+    </StyledForm>
   );
 };
 
