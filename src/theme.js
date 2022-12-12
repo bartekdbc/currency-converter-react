@@ -4,8 +4,5 @@ export const theme = {
         black: "#000000",
         green: "#40916c",
         silverTree: "#67B99A",
-    },
-    breakpoint: {
-
     }
 };
