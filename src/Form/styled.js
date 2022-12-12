@@ -5,7 +5,7 @@ export const StyledForm = styled.form`
 `;
 
 export const Header = styled.h2`
-  color: #40916c;
+  color: ${({ theme }) => theme.color.green};
   text-align: center;
   border-radius: 5px;
   font-size: 30px;
@@ -30,7 +30,7 @@ export const LabelText = styled.span`
 `;
 
 export const Input = styled.input`
-  border: 2px solid #40916c;
+  border: 2px solid ${({ theme }) => theme.color.green};
   border-radius: 5px;
   padding: 10px;
   width: 100%;
@@ -39,7 +39,7 @@ export const Input = styled.input`
 `;
 
 export const Select = styled.select`
-  border: 2px solid #40916c;
+  border: 2px solid ${({ theme }) => theme.color.green};
   border-radius: 5px;
   padding: 10px;
   width: 100%;
@@ -51,18 +51,18 @@ export const Button = styled.button`
   border-radius: 5px;
   padding: 5px 10px;
   width: 100%;
-  border: 1px solid #40916c;
+  border: 1px solid ${({ theme }) => theme.color.green};
   cursor: pointer;
-  background-color: #40916c;
-  color: #ffffff;
+  background-color: ${({ theme }) => theme.color.green};
+  color: ${({ theme }) => theme.color.white};
   font-size: 20px;
   text-transform: uppercase;
-  text-shadow: #000000 1px 1px 2px;
+  text-shadow: ${({ theme }) => theme.color.black} 1px 1px 2px;
   font-weight: bold;
   margin: 10px 0px 0px;
-  box-shadow: #000000 1px 2px 5px;
+  box-shadow: ${({ theme }) => theme.color.black} 1px 2px 5px;
 
   &:hover {
-    background-color: #67b99a;
+    background-color: ${({ theme }) => theme.color.silverTree};
   }
 `;
