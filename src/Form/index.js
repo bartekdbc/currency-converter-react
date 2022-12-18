@@ -12,6 +12,7 @@ import {
   Button,
   LoadingText,
   ErrorText,
+  Spinner,
 } from "./styled";
 import { useRatesData } from "./useRatesData";
 
@@ -53,9 +54,12 @@ const Form = () => {
           Jeśli Twoje połączenie jest stabilne, spróbuj ponownie później.
         </ErrorText>
       ) : status !== "success" ? (
-        <LoadingText>
-          Trwa ładowanie danych z Europejskiego Banku Centralnego.
-        </LoadingText>
+        <>
+          <LoadingText>
+            Trwa ładowanie danych z Europejskiego Banku Centralnego.
+          </LoadingText>
+          <Spinner></Spinner>
+        </>
       ) : (
         <StyledFieldset>
           <p>
@@ -75,11 +79,7 @@ const Form = () => {
           <p>
             <Label>
               <LabelText>Waluta*:</LabelText>
-              <FormField 
-                as="select" 
-                value={currency} 
-                onChange={onSelectChange}
-                >
+              <FormField as="select" value={currency} onChange={onSelectChange}>
                 {currencies.map((currency) => (
                   <option key={currency.short} value={currency.short}>
                     {currency.name}
