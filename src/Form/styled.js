@@ -61,3 +61,12 @@ export const Button = styled.button`
     background-color: ${({ theme }) => theme.color.silverTree};
   }
 `;
+
+export const LoadingText = styled.p`
+  font-size: 20px;
+  line-height: 1.5;
+`;
+
+export const ErrorText = styled(LoadingText)`
+  color: hsl(352, 73%, 49%);
+`;
