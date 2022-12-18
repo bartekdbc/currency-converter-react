@@ -7,7 +7,7 @@ export const useRatesData = () => {
   });
 
   useEffect(() => {
-    const getRates = (async () => {
+    const getRates = async () => {
       try {
         const response = await axios.get(
           "https://api.exchangerate.host/latest?base=PLN"
@@ -22,9 +22,9 @@ export const useRatesData = () => {
           status: "error",
         });
       }
-    });
-      setTimeout(getRates, 2000);
-      }, []);
+    };
+    setTimeout(getRates, 2000);
+  }, []);
 
   return ratesData;
 };
