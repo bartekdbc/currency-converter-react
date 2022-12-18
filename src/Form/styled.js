@@ -75,14 +75,20 @@ export const Spinner = styled.div`
   margin: 20px auto;
   height: 50px;
   width: 50px;
-  border: 5px solid ${({ theme }) => theme.color.silverTree};
-  border-top: 5px solid ${({ theme }) => theme.color.green};
-  border-bottom: 5px solid ${({ theme }) => theme.color.green};
+  border: 5px solid ${({ theme }) => theme.color.green};
   border-radius: 50%;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
   animation: spin 1s linear infinite;
 
   @keyframes spin {
-    to {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg) scale(1.2);
+    }
+    100% {
       transform: rotate(360deg);
     }
   }
