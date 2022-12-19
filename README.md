@@ -1,5 +1,6 @@
 # Currency Converter 💱
-## Table of content 
+
+## Table of content
 
 - [Demo](#demo)
 - [Description](#description)
@@ -16,20 +17,23 @@ You can find a demo version [here](https://bartekdbc.github.io/currency-converte
 
 This is a currency converter that allows to exchange Polish zloty into currencies such as:
 
-- 🇪🇺 EURO,
-- 🇺🇸 USD,
+- 🇦🇺 AUD,
 - 🇨🇭 CHF,
-- 🇬🇧 GBP, 
-- 🇭🇰 HKD.
+- 🇪🇺 EURO,
+- 🇬🇧 GBP,
+- 🇳🇿 NZD,
+- 🇺🇸 USD.
 
-Application was created as a practical section part of  YouCode Frontend Developer Course and it was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Current exchange rates are downloaded from the external API, so every time you enter or reload the website, the data updates itself.
+
+Application was created as a practical section part of YouCode Frontend Developer Course and it was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 Below you can find user's manual to this application.
 
 ## 🕹️Manual
 
 1. Enter a value that you want to exchange.
-2. Select one of five currencies from the list.
+2. Select one of six currencies from the list.
 3. CLick on "PRZELICZ" button to receive the result.
 
 ## 👀Preview
