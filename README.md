@@ -83,4 +83,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 - Create-react-app
 - React Hooks (incl. Custom Hooks)
 - Styled components
+- Axios
+- Async/await
 - Markdown
