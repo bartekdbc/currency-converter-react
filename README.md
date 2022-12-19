@@ -38,7 +38,7 @@ Below you can find user's manual to this application.
 
 ## 👀Preview
 
-![Preview](https://github.com/bartekdbc/currency-converter/blob/main/images/Manual.gif)
+![Preview](https://github.com/bartekdbc/currency-converter-react/blob/main/public/Manual.gif)
 
 ## Available Scripts
 
