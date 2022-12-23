@@ -55,7 +55,9 @@ const Form = () => {
       ) : status !== "success" ? (
         <>
           <LoadingText>
-            Trwa ładowanie danych <br />z Europejskiego Banku Centralnego.
+            Trwa ładowanie danych <br />z Europejskiego Banku Centralnego.{" "}
+            <br />
+            Prosimy o chwilkę cierpliwości.
           </LoadingText>
           <Spinner></Spinner>
         </>
