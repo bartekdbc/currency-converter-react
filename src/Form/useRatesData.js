@@ -9,7 +9,7 @@ export const useRatesData = () => {
   useEffect(() => {
     const getRates = async () => {
       try {
-        const currenciesURL = `https://api.exchangerate.host/latest?base=PLN&symbols=EUR,USD,CHF,GBP,AUD,NZD,HK`;
+        const currenciesURL = "https://api.exchangerate.host/latest?base=PLN";
 
         const response = await axios.get(currenciesURL);
 
