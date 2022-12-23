@@ -20,12 +20,13 @@ const Form = () => {
   const [currency, setCurrency] = useState("EUR");
   const [result, setResult] = useState();
   const ratesData = useRatesData();
+  const { date, rates, status } = ratesData;
 
   const onInputChange = ({ target }) => setAmount(target.value);
   const onSelectChange = ({ target }) => setCurrency(target.value);
 
   const calculateResult = () => {
-    const rate = ratesData.rates[currency];
+    const rate = rates[currency];
 
     setResult({
       currency,
@@ -44,14 +45,14 @@ const Form = () => {
       <Header>
         Kalkulator walutowy by <Special>dbc</Special>
       </Header>
-      {ratesData.status === "error" ? (
+      {status === "error" ? (
         <ErrorText>
           Ups...coś poszło nie tak.😟
           <br />
           Sprawdź swoje połączenie z internetem. <br />
           Jeśli Twoje połączenie jest stabilne, spróbuj ponownie później.
         </ErrorText>
-      ) : ratesData.status !== "success" ? (
+      ) : status !== "success" ? (
         <>
           <LoadingText>
             Trwa ładowanie danych <br />z Europejskiego Banku Centralnego.
@@ -78,7 +79,7 @@ const Form = () => {
             <Label>
               <LabelText>Waluta*:</LabelText>
               <FormField as="select" value={currency} onChange={onSelectChange}>
-                {Object.keys(ratesData.rates).map((currency) => (
+                {Object.keys(rates).map((currency) => (
                   <option key={currency} value={currency}>
                     {currency}
                   </option>
@@ -94,7 +95,7 @@ const Form = () => {
           <p>
             Kursy walut pobierane są z Europejskiego Banku Centralnego.
             <br />
-            Aktualne na dzień: <strong>{ratesData.date}</strong>
+            Aktualne na dzień: <strong>{date}</strong>
           </p>
         </StyledFieldset>
       )}
