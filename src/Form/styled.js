@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledForm = styled.form`
   background-color: #ffffff;
+  min-height: 450px;
 `;
 
 export const Header = styled.h2`
@@ -64,7 +65,8 @@ export const Button = styled.button`
 
 export const LoadingText = styled.p`
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 2.5;
+  margin-top: 60px;
 `;
 
 export const ErrorText = styled(LoadingText)`
@@ -72,7 +74,7 @@ export const ErrorText = styled(LoadingText)`
 `;
 
 export const Spinner = styled.div`
-  margin: 20px auto;
+  margin: 40px auto;
   height: 50px;
   width: 50px;
   border: 5px solid ${({ theme }) => theme.color.green};
