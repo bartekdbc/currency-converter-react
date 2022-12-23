@@ -54,7 +54,7 @@ const Form = () => {
       ) : ratesData.status !== "success" ? (
         <>
           <LoadingText>
-            Trwa ładowanie danych z Europejskiego Banku Centralnego.
+            Trwa ładowanie danych <br />z Europejskiego Banku Centralnego.
           </LoadingText>
           <Spinner></Spinner>
         </>
