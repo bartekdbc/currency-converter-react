@@ -65,7 +65,7 @@ export const Button = styled.button`
 
 export const LoadingText = styled.p`
   font-size: 20px;
-  line-height: 2.0;
+  line-height: 2;
   margin-top: 30px;
 `;
 
