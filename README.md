@@ -11,7 +11,7 @@
 
 ## 🎮Demo
 
-You can find a demo version [here](/public/Manual.gif).
+You can find a demo version [here](https://bartekdbc.github.io/currency-converter-react/).
 
 ## 📖Description
 
@@ -38,7 +38,7 @@ Below you can find user's manual to this application.
 
 ## 👀Preview
 
-![Preview](https://github.com/bartekdbc/currency-converter-react/blob/main/public/Manual.gif)
+![Preview](/public/Manual.gif)
 
 ## Available Scripts
 
