@@ -43,21 +43,22 @@ const Form = () => {
   return (
     <StyledForm onSubmit={onFormSubmit}>
       <Header>
-        Kalkulator walutowy by <Special>dbc</Special>
+        Currency converter by <Special>dbc</Special>
       </Header>
       {status === "error" ? (
         <ErrorText>
-          Ups...coś poszło nie tak.😟
+          Oops...something went wrong.😟
           <br />
-          Sprawdź swoje połączenie z internetem. <br />
-          Jeśli Twoje połączenie jest stabilne, spróbuj ponownie później.
+          Please check your internet connection. <br />
+          If your connection is stable, please try again later.
         </ErrorText>
       ) : status !== "success" ? (
         <>
           <LoadingText>
-            Trwa ładowanie danych <br />z Europejskiego Banku Centralnego.{" "}
+            Loading data from
             <br />
-            Prosimy o chwilkę cierpliwości.
+            the European Central Bank. <br />
+            Please be patient.
           </LoadingText>
           <Spinner></Spinner>
         </>
@@ -65,7 +66,7 @@ const Form = () => {
         <StyledFieldset>
           <p>
             <Label>
-              <LabelText>Kwota*:</LabelText>
+              <LabelText>Amount*:</LabelText>
               <FormField
                 value={amount}
                 type="number"
@@ -79,7 +80,7 @@ const Form = () => {
           </p>
           <p>
             <Label>
-              <LabelText>Waluta*:</LabelText>
+              <LabelText>Currency*:</LabelText>
               <FormField as="select" value={currency} onChange={onSelectChange}>
                 {Object.keys(rates).map((currency) => (
                   <option key={currency} value={currency}>
@@ -90,14 +91,14 @@ const Form = () => {
             </Label>
           </p>
           <p>
-            <Button>Przelicz</Button>
+            <Button>Convert</Button>
           </p>
           <Result result={result} />
-          <p>*- wymagane pola</p>
+          <p>*- field required</p>
           <p>
-            Kursy walut pobierane są z Europejskiego Banku Centralnego.
+            Exchange rates are taken from the European Central Bank.
             <br />
-            Aktualne na dzień: <strong>{date}</strong>
+            Current as of: <strong>{date}</strong>
           </p>
         </StyledFieldset>
       )}

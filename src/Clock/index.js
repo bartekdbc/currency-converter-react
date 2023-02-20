@@ -13,11 +13,7 @@ const Clock = () => {
     second: "2-digit",
   });
 
-  return (
-    <StyledClock>
-      Dzisiaj jest {formattedDate}
-    </StyledClock>
-  );
+  return <StyledClock>Today is {formattedDate}</StyledClock>;
 };
 
 export default Clock;
