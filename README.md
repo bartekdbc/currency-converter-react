@@ -11,7 +11,7 @@
 
 ## 🎮Demo
 
-You can find a demo version [here](https://bartekdbc.github.io/currency-converter-react/).
+You can find a demo version [here](/public/Manual.gif).
 
 ## 📖Description
 
@@ -34,7 +34,7 @@ Below you can find user's manual to this application.
 
 1. Enter a value that you want to exchange.
 2. Select one of six currencies from the list.
-3. CLick on "PRZELICZ" button to receive the result.
+3. CLick on "CONVERT" button to receive the result.
 
 ## 👀Preview
 
